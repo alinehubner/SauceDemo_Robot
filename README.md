@@ -17,6 +17,7 @@ Fluxos validados:
 
 
 ## 📂 Estrutura de pastas
+```
 SauceDemo_Robot/
 ├── tests/        # Cenários de teste (ex.: login.robot, carrinho.robot, checkout.robot)
 ├── resources/    # Page objects: locators e keywords reutilizáveis
@@ -25,7 +26,7 @@ SauceDemo_Robot/
 ├── requirements.txt  # Lista de dependências do projeto
 ├── .gitignore        # Arquivos/pastas ignorados pelo Git
 └── README.md         # Documentação do projeto
-
+```
 
 ## ▶️ Como rodar o projeto
 1. Clonar repositório
