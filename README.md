@@ -29,15 +29,17 @@ SauceDemo_Robot/
 ```
 
 ## ▶️ Como rodar o projeto
+```
 1. Clonar repositório
 
     git clone https://github.com/alinehubner/SauceDemo_Robot.git
     cd SauceDemo_Robot
 
 2. Criar ambiente virtual
+
     python -m venv venv
 
-    Ativar o ambiente no Windows (PowerShell ou CMD):
+Ativar o ambiente no Windows (PowerShell ou CMD):
     venv\Scripts\activate
 
 3. Instalar dependências
@@ -48,7 +50,7 @@ SauceDemo_Robot/
 
 5. Executar um teste específico
     robot tests/login.robot
-
+```
 
 ## 📊 Relatórios de execução
 Após rodar os testes, o Robot Framework gera automaticamente:
