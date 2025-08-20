@@ -1,0 +1,12 @@
+# Ambiente virtual
+venv/
+
+# Relatórios e evidências
+reports/
+log.html
+report.html
+output.xml
+
+# Configurações locais
+.vscode/
+__pycache__/
