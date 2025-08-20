@@ -63,11 +63,11 @@ Esses arquivos ficam na raiz do projeto, mas não são versionados no GitHub (es
 
 
 ## ✅ Cenários implementados
-
+```
 1 - Login válido com usuário e senha corretos.
 2 - Adicionar itens ao carrinho e validar o total.
 3 - Checkout completo até a tela de confirmação.
-
+```
 
 ## 🤝 Contribuições
 
