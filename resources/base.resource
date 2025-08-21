@@ -11,4 +11,5 @@ Abrir Browser
     Maximize Browser Window
 
 Fechar Browser
-    Close All Browsers
+    Capture Page Screenshot
+    Close Browser
