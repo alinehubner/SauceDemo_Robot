@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation       Suite de teste adicionar produtos ao carrinho
 Resource            ../resources/base.resource
 Resource        	../resources/PageObjects/LoginPage.resource
 Resource        	../resources/PageObjects/CarrinhoPage.resource
@@ -14,7 +15,3 @@ Cenário: Adicionar Itens ao Carrinho
     Quando adiciono itens ao carrinho
     Então a quantidade no carrinho deve ser igual à quantidade adicionada
 
-Cenario: teste
-    Abrir Carrinho
-    Validar Quantidade No Badge
-    Validar Quantidade No Carrinho
