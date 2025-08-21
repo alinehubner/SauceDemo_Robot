@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../base.resource
-Resource   ../data/usuarios.resource
+Resource   ../data/dados.resource
 
 *** Variables ***
 ${LOGIN_PAGE_URL}       https://www.saucedemo.com
@@ -27,6 +27,7 @@ Preencher Password
 
 Clicar Login
     Wait Until Element Is Visible    ${BUTTON_LOGIN}
+    Capture Page Screenshot
     Click Button    ${BUTTON_LOGIN}
 
 
