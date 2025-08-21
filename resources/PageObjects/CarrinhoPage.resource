@@ -19,30 +19,33 @@ Adicionar N Itens Qualquer
     FOR    ${i}    IN RANGE    ${qtd}
         Click Element    ${add_buttons[${i}]}
     END
-    Set Suite Variable    ${QTD_ADICIONADA}    ${qtd}
+    Set Test Variable    ${QTD_ADICIONADA}    ${qtd}
     Capture Page Screenshot
 
 Obter Quantidade No Carrinho
     ${status}    ${v}=    Run Keyword And Ignore Error    Get Text    ${ITENS_CARRINHO}
     ${v}=    Set Variable If    '${status}'=='FAIL'    0    ${v}
-    RETURN    ${v}
+    [RETURN]    ${v}
 
 Abrir Carrinho
     Wait Until Element Is Visible    ${BOTAO_CARRINHO}    10s
     Click Element    ${BOTAO_CARRINHO}
-    #Wait Until Page Contains Element    ${CART_ITEM}    10s
+    Wait Until Page Contains Element    ${CART_ITEM}    10s
     Capture Page Screenshot
 
 
-Validar Quantidade No Badge    ${esperado}
+Validar Quantidade No Badge
+    [Arguments]    ${esperado}
     ${valor}=    Obter Quantidade No Carrinho
     Should Be Equal As Integers    ${valor}    ${esperado}
 
 
-Validar Quantidade No Carrinho    ${esperado}
+Validar Quantidade No Carrinho
+    [Arguments]    ${esperado}
     Abrir Carrinho
     ${qtd}=    Get Element Count    ${CART_ITEM}
-    Should Be Equal As Integers    ${qtd}    ${esperado}
+    ${esperado_int}=    Convert To Integer    ${esperado}
+    Should Be Equal As Integers    ${qtd}    ${esperado_int}
 
 
 ###################################
@@ -53,11 +56,12 @@ Dado que estou na página de produtos
 
 Quando adiciono itens ao carrinho
     Adicionar N Itens Qualquer
+    Obter Quantidade No Carrinho
 
 Então a quantidade no carrinho deve ser igual à quantidade adicionada
     Abrir Carrinho
-    # Validar Quantidade No Badge       ${QTD_ADICIONADA}
-    # Validar Quantidade No Carrinho    ${QTD_ADICIONADA}
+    Validar Quantidade No Badge       ${QTD_ADICIONADA}
+    Validar Quantidade No Carrinho    ${QTD_ADICIONADA}
 
 ###################################
 ####### Keywords em Gherkin #######
@@ -66,9 +70,4 @@ Adicionar Itens
     Dado que estou na página de produtos
     Quando adiciono itens ao carrinho
     Então a quantidade no carrinho deve ser igual à quantidade adicionada
-
-
-
-
-
 
