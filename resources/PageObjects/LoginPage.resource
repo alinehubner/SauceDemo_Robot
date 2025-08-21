@@ -3,13 +3,12 @@ Library    SeleniumLibrary
 Resource   ../base.resource
 
 *** Variables ***
-${INPUT_USERNAME}    css=[data-test="username"]
-${INPUT_PASSWORD}    css=[data-test="password"]
-${BTN_LOGIN}         css=[data-test="login-button"]
-${TXT_ERROR}         css=[data-test="error"]
+${INPUT_USERNAME}    id=user-name
+${INPUT_PASSWORD}    id="password"
+${LOGIN_BUTTON}      id="login-button"
 
 *** Keywords ***
-Preencher Uername
+Preencher Username
     [Arguments]    ${username}
     Wait Until Element Is Visible    ${INPUT_USERNAME}
     Input Text    ${INPUT_USERNAME}    ${username}
@@ -20,5 +19,5 @@ Preencher Password
     Input Text    ${INPUT_PASSWORD}    ${password}
 
 Clicar Login
-    Wait Until Element Is Visible    ${BTN_LOGIN}
-    Click Button    ${BTN_LOGIN}
+    Wait Until Element Is Visible    ${LOGIN_BUTTON}
+    Click Button    ${LOGIN_BUTTON}
