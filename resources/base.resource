@@ -2,15 +2,12 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${BASE_URL}       https://www.saucedemo.com
 ${BROWSER}        chrome
-${SEL_TIMEOUT}    10s
 
 
 *** Keywords ***
 Abrir Browser
-    Open Browser    ${BASE_URL}    ${BROWSER}
-    Set Selenium Timeout    ${SEL_TIMEOUT}
+    Open Browser   about:blank    ${BROWSER}
     Maximize Browser Window
 
 Fechar Browser
