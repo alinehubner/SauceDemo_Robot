@@ -7,6 +7,7 @@ Test Teardown       Fechar Browser
 
 *** Test Cases ***
 Cenário: Efetuar login
+    [Documentation]    Teste de login efetuado com sucesso
     [Tags]             Login
 	Dado que estou na página de login
 	E insiro minhas credecinais

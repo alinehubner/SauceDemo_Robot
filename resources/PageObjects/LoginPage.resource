@@ -30,7 +30,10 @@ Clicar Login
     Click Button    ${BUTTON_LOGIN}
 
 
-#### Atalhos ####
+############################
+######### Atalhos ##########
+
+##  Testes no formato BDD ##
 
 Dado que estou na página de login
     Acessar Pagina de Login
@@ -45,6 +48,7 @@ Quando eu clicar em "Login"
 Então eu estarei autenticado
     Wait Until Page Contains    Products
 
+### Caso de teste em Gherkin ###
 Fazer Login
     Dado que estou na página de login
 	E insiro minhas credecinais
