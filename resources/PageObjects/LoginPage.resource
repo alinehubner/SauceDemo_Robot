@@ -30,7 +30,7 @@ Clicar Login
     Click Button    ${BUTTON_LOGIN}
 
 
-#*** Atalhos ***#
+#### Atalhos ####
 
 Dado que estou na página de login
     Acessar Pagina de Login
