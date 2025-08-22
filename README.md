@@ -19,9 +19,9 @@ Fluxos validados:
 ## 📂 Estrutura de pastas
 ```
 SauceDemo_Robot/
-├── tests/        # Cenários de teste (ex.: login.robot, carrinho.robot, checkout.robot)
+├── tests/        # Cenários de teste: arquivos .robot
 ├── resources/    # Page objects: locators e keywords reutilizáveis
-├── data/         # Massa de dados (ex.: users.json)
+├── data/         # Massa de dados
 ├── reports/      # Relatórios e prints de execução (não versionados no GitHub)
 ├── requirements.txt  # Lista de dependências do projeto
 ├── .gitignore        # Arquivos/pastas ignorados pelo Git
