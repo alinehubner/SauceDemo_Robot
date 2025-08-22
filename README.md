@@ -37,7 +37,7 @@ SauceDemo_Robot/
 
 2. Criar ambiente virtual
 
-    python -m venv venv
+    python -m venv .venv
 
 Ativar o ambiente no Windows (PowerShell ou CMD):
     venv\Scripts\activate

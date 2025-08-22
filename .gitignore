@@ -19,3 +19,6 @@ reports/
 
 # Logs
 *.log
+
+# Arquivo temporário de teste
+Tem.robot
